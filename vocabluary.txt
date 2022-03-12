@@ -1,9 +1,9 @@
 Once a function exist - gdy funkcja istnieje
-changs its beahvior - zmienić jego zachowanie
+changs its beahvior - zmienic jego zachowanie
 based on the number of arguments - w zaleznosci od liczby argumentow
 that is allowed when using functions - jest to dozwolone podczas uzywania funkcji
 its - jego
 shedding - tracenie
 shed - tracic
-never lie face down - nigdy nie kladz się twarza w dol
+never lie face down - nigdy nie kladz sie twarza w dol
 contributor - wspoltworca

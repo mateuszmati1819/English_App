@@ -3,4 +3,4 @@
 #include <time.h>
 #include "functions.c"
 
-void fun4fun(char *any_string);
+void randomingLine(char* any_string, char* xd);
