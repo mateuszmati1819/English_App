@@ -29,3 +29,30 @@ void function(char* text, int randomed)
     
   }  
 }
+
+
+void polish_englishWord(char *sentence, char *polishWord, char *englishWord)
+{
+  char *token;
+  char s[2] = "-";
+  token = strtok(sentence, s);
+  static int i=0;
+
+  while(token !=NULL)
+  {
+    if(i==0)
+    {
+      strcpy(polishWord, token);
+    }
+    else
+    {
+      strcpy(englishWord, token);
+    }
+     
+    token = strtok(NULL, s);
+    i++;
+  }
+
+}
+
+

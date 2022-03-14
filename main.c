@@ -3,25 +3,38 @@
 #include <conio.h>
 #include <time.h>
 #include "functions.h"
+#include <string.h>
 
 int main()
 {
   system("cls");
   char text[50];
   int randomed;
-  static int i=0;
   srand(time(NULL));
-  
 
-  do
-  {
-    printf("%d \n", i);
-    randomed = rand()%3+1;
-    printf("%d", randomed);
-    function(text, randomed);
-    printf("%s", text);
-    i++;
-  } while (i<4);
+  char str[80];
+  char polishWord[150];
+  char englishWord[150];
+
+  randomed = rand()%3+1;
+  function(text, randomed);
+  printf("%s", text);
+
+  polish_englishWord(text , polishWord, englishWord);
+  
+  printf("Polish Word: %s\n", polishWord);
+  printf("English Word: %s\n", englishWord);
+
+
+  return 0;
+
+  // do
+  // {
+  //   printf("Do you want continue?");
+  //   scanf(" %c",&sign);
+
+  //   fflush(stdin);
+  // } while (sign=='y');
   
 }
 
