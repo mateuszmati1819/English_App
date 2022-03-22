@@ -9,35 +9,34 @@ int main()
 {
   system("cls");
   char text[50];
+  char userWord[150];
   int randomed;
+  char continuation;
   srand(time(NULL));
 
-  char str[80];
   char polishWord[150];
   char englishWord[150];
-
+do{
   randomed = rand()%3+1;
   function(text, randomed);
-  printf("%s", text);
+  polish_englishWord(text , englishWord, polishWord);
+  printf("%s\n", englishWord);
+  printf("Jak powiesz to po polsku\n");
+  scanf(" %[^\n]s", &userWord);
+  strcat(userWord,"\n");
 
-  polish_englishWord(text , polishWord, englishWord);
-  
-  printf("Polish Word: %s\n", polishWord);
-  printf("English Word: %s\n", englishWord);
-
-
+  if(!strcmp(userWord,polishWord))
+  {
+    printf("Good!");
+  }
+  else
+  {
+    printf("Error :/\n");
+    printf("%s\n", polishWord);
+  }
+  printf("Do you want continue y/n?");
+  scanf(" %c", &continuation);
+}while(continuation == 'y');
   return 0;
 
-  // do
-  // {
-  //   printf("Do you want continue?");
-  //   scanf(" %c",&sign);
-
-  //   fflush(stdin);
-  // } while (sign=='y');
-  
-}
-
-
-// Ideas -> you can also bring to the function randomed numebr and only red this line  without randoming its in function. 
-// Function should be the simplest as it is possible.
+  }
